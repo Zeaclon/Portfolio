@@ -14,7 +14,7 @@ interface SkillsSectionProps {
 const SkillCard: React.FC<SkillsSectionProps> = ({ title, icon, skills }) => {
     return (
         <div className="glass-effect rounded-2xl p-8 aos-init" data-aos="fade-up">
-            <div className="text-4xl mb-4 text-primary">
+            <div className="text-4xl mb-4" style={{ color: 'var(--color-primary)' }}>
                 <i className={icon}></i>
             </div>
             <h3 className="text-2xl font-bold mb-4">{title}</h3>
@@ -23,12 +23,15 @@ const SkillCard: React.FC<SkillsSectionProps> = ({ title, icon, skills }) => {
                     <div key={index}>
                         <div className="flex justify-between mb-1">
                             <span>{skill.name}</span>
-                            <span className="text-primary">{skill.percentage}%</span>
+                            <span style={{ color: 'var(--color-accent)' }}>{skill.percentage}%</span>
                         </div>
                         <div className="w-full bg-gray-800 rounded-full h-2">
                             <div
-                                className="bg-gradient-to-r from-primary to-primary-dark h-2 rounded-full"
-                                style={{ width: `${skill.percentage}%` }}
+                                className="h-2 rounded-full"
+                                style={{
+                                    width: `${skill.percentage}%`,
+                                    background: 'linear-gradient(to right, var(--color-accent), var(--color-primary))',
+                                }}
                             ></div>
                         </div>
                     </div>
@@ -60,7 +63,10 @@ const Skills: React.FC = () => {
     return (
         <section className="py-20 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-4xl sm:text-5xl font-bold text-center mb-16 gradient-text aos-init" data-aos="fade-up">
+                <h2
+                    className="text-4xl sm:text-5xl font-bold text-center mb-16 gradient-text aos-init"
+                    data-aos="fade-up"
+                >
                     Skills &amp; Expertise
                 </h2>
 

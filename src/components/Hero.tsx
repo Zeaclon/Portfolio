@@ -53,8 +53,12 @@ const Hero = () => {
                         </div>
                     </div>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center aos-animate" data-aos="face-up" data-aos-delay="400">
-                        <a className="px-8 py-4 bg-gradient-to-r from-primary to-primary-dark rounded-lg font-semibold hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 transform hover:scale-105"
-                           href="#projects">
+                        <a className="px-8 py-4 rounded-lg font-semibold hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                            href="#projects"
+                            style={{
+                                background: 'linear-gradient(to right, var(--color-accent), var(--color-primary))',
+                                color: 'white',
+                            }}>
                             View My Work
                         </a>
                         <a className="px-8 py-4 glass-effect rounded-lg font-semibold hover:bg-primary/20 transition-all duration-300 transform hover:scale-105"

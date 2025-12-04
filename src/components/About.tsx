@@ -4,8 +4,8 @@ const About = () => {
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-4xl sm:text-5xl font-bold text-center mb-16 gradient-text">About Me</h2>
                 <div className="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div className="glass-effect rounded-2xl p-8">
+                    <div className="aos-init" data-aos="fade-right">
+                        <div className="glass-effect rounded-2xl p-8 glow-animation">
                             <img src="profile-picture.jpg" alt="Profile" className="rounded-2xl w-full h-96 object-cover" />
                         </div>
                     </div>

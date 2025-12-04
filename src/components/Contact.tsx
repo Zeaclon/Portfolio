@@ -1,4 +1,6 @@
 import React from 'react';
+import { faGithub, faTwitter, faLinkedin,} from '@fortawesome/free-brands-svg-icons';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const Contact = () => {
     return (
@@ -50,30 +52,29 @@ const Contact = () => {
                         <button
                             type="submit"
                             className="w-full px-8 py-4 bg-gradient-to-r from-primary to-primary-dark rounded-lg font-semibold hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 transform hover:scale-105"
-                        >
+                            style={{
+                                background: 'linear-gradient(to right, var(--color-accent), var(--color-primary))',
+                                color: 'white',
+                            }}>
                             Send Message
                         </button>
                     </form>
 
                     <div className="mt-12 pt-8 border-t border-gray-700">
                         <div className="flex justify-center gap-6">
-                            <a
-                                href="#"
-                                className="w-12 h-12 flex items-center justify-center glass-effect rounded-full hover:bg-primary/20 transition-all duration-300 transform hover:scale-110"
-                            >
-                                <i className="fab fa-github text-xl"></i>
+                            <a className="w-12 h-12 flex items-center justify-center glass-effect rounded-full hover:bg-primary/20 transition-all duration-300 transform hover:scale-110"
+                                href="#">
+                                <FontAwesomeIcon icon={faGithub} className="text-3xl text-primary" />
+                            </a>
+                            <a className="w-12 h-12 flex items-center justify-center glass-effect rounded-full hover:bg-primary/20 transition-all duration-300 transform hover:scale-110"
+                                href="#">
+                                <FontAwesomeIcon icon={faLinkedin} className="text-3xl text-primary" />
                             </a>
                             <a
                                 href="#"
                                 className="w-12 h-12 flex items-center justify-center glass-effect rounded-full hover:bg-primary/20 transition-all duration-300 transform hover:scale-110"
                             >
-                                <i className="fab fa-linkedin text-xl"></i>
-                            </a>
-                            <a
-                                href="#"
-                                className="w-12 h-12 flex items-center justify-center glass-effect rounded-full hover:bg-primary/20 transition-all duration-300 transform hover:scale-110"
-                            >
-                                <i className="fab fa-twitter text-xl"></i>
+                                <FontAwesomeIcon icon={faTwitter} className="text-3xl text-primary" />
                             </a>
                             <a
                                 href="#"
