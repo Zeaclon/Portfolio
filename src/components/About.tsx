@@ -11,9 +11,12 @@ const About = () => {
                     </div>
 
                     <div>
-                        <h3 className="text-3xl font-bold mb-6">Passionate Developer with 5+ Years Experience</h3>
-                        <p className="text-gray-300 mb-6">I specialize in building scalable web applications and creating seamless user experiences...</p>
-                        {/* More content */}
+                        <h3 className="text-3xl font-bold mb-6">Full-Stack Developer Focused on Building Practical, Scalable Software</h3>
+                        <p className="text-gray-300 mb-6">
+                            I build scalable web applications with an emphasis on clean architecture, maintainable code,
+                            and intuitive user experiences. I also develop and publish personal projects under the handle
+                            <span className="font-semibold text-white"> Zeaclon</span>, where I experiment with new ideas and technologies.
+                        </p>
                     </div>
                 </div>
             </div>

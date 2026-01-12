@@ -33,25 +33,25 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, delay }) =>
 const ExperienceSection: React.FC = () => {
     const experiences: Experience[] = [
         {
-            title: 'Senior Full-Stack Developer',
-            company: 'TechCorp Solutions',
-            dateRange: '2021 - Present',
+            title: 'Junior Software Developer ',
+            company: 'Zone RV',
+            dateRange: 'Jan 2025 - Dec 2025',
             description:
                 'Led development of enterprise-level web applications serving 100K+ users. Architected microservices infrastructure, implemented CI/CD pipelines, and mentored junior developers. Reduced deployment time by 60% and improved application performance by 40%.',
         },
         {
-            title: 'Full-Stack Developer',
-            company: 'StartupHub Inc.',
-            dateRange: '2019 - 2021',
+            title: 'Missionary',
+            company: 'Church of Jesus Christ of Latter-Day Saints',
+            dateRange: 'Dec 2021 - Dec 2023',
             description:
-                'Developed and maintained multiple client projects using React, Node.js, and MongoDB. Collaborated with design teams to create responsive, user-friendly interfaces. Implemented real-time features using WebSockets and optimized database queries for better performance.',
+                'Developed communication, problem-solving, and cross-cultural teamwork skills.',
         },
         {
-            title: 'Junior Developer',
-            company: 'Digital Agency Pro',
-            dateRange: '2018 - 2019',
+            title: 'Delivery Driver',
+            company: "Work'n'Learn",
+            dateRange: 'Nov 2020 - Feb 2021',
             description:
-                'Built responsive websites and web applications for various clients. Worked with HTML, CSS, JavaScript, and WordPress. Gained experience in version control, agile methodologies, and client communication.',
+                'Time management and operational reliability in high-pressure environments.',
         },
     ];
 

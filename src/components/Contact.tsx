@@ -1,5 +1,6 @@
 import React from 'react';
 import { faGithub, faTwitter, faLinkedin,} from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const Contact = () => {
@@ -63,23 +64,22 @@ const Contact = () => {
                     <div className="mt-12 pt-8 border-t border-gray-700">
                         <div className="flex justify-center gap-6">
                             <a className="w-12 h-12 flex items-center justify-center glass-effect rounded-full hover:bg-primary/20 transition-all duration-300 transform hover:scale-110"
-                                href="#">
+                                href="https://github.com/Zeaclon"
+                                target="_blank"
+                                rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faGithub} className="text-3xl text-primary" />
                             </a>
                             <a className="w-12 h-12 flex items-center justify-center glass-effect rounded-full hover:bg-primary/20 transition-all duration-300 transform hover:scale-110"
-                                href="#">
+                                href="https://www.linkedin.com/in/bryce-marrett-325677311/"
+                                target="_blank"
+                                rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faLinkedin} className="text-3xl text-primary" />
                             </a>
                             <a
-                                href="#"
                                 className="w-12 h-12 flex items-center justify-center glass-effect rounded-full hover:bg-primary/20 transition-all duration-300 transform hover:scale-110"
+                                href="mailto:b_marrett@outlook.com"
                             >
-                                <FontAwesomeIcon icon={faTwitter} className="text-3xl text-primary" />
-                            </a>
-                            <a
-                                href="#"
-                                className="w-12 h-12 flex items-center justify-center glass-effect rounded-full hover:bg-primary/20 transition-all duration-300 transform hover:scale-110"
-                            >
+                                <FontAwesomeIcon icon={faEnvelope} className="text-3xl text-primary" />
                                 <i className="fas fa-envelope text-xl"></i>
                             </a>
                         </div>
