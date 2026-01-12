@@ -8,19 +8,35 @@ interface Skill {
     percentage: number;
 }
 
+interface GithubSkillsResponse {
+    frontend: Record<string, number>;
+    backend: Record<string, number>;
+    cloud: Record<string, number>;
+}
+
+interface GithubSkillsError {
+    error: string;
+}
+
+type GithubSkillsApiResponse = GithubSkillsResponse | GithubSkillsError;
+
 const Skills: React.FC = () => {
-    const [githubSkills, setGithubSkills] = useState<Skill[]>([]);
+    const [frontendSkills, setFrontendSkills] = useState<Skill[]>([]);
+    const [backendSkills, setBackendSkills] = useState<Skill[]>([]);
+    const [cloudSkills, setCloudSkills] = useState<Skill[]>([]);
 
     useEffect(() => {
         fetch('/api/github-languages')
             .then(res => res.json())
-            .then((data) => {
-                if (data.error) return;
-                const skillsArray: Skill[] = Object.entries(data).map(([name, percentage]) => ({
-                    name,
-                    percentage: percentage as number,
-                }));
-                setGithubSkills(skillsArray);
+            .then((data: GithubSkillsApiResponse) => {
+                if ('error' in data) {
+                    console.error(data.error);
+                    return;
+                }
+
+                setFrontendSkills(Object.entries(data.frontend).map(([name, percentage]) => ({ name, percentage })));
+                setBackendSkills(Object.entries(data.backend).map(([name, percentage]) => ({ name, percentage })));
+                setCloudSkills(Object.entries(data.cloud).map(([name, percentage]) => ({ name, percentage })));
             })
             .catch(console.error);
     }, []);
@@ -33,17 +49,9 @@ const Skills: React.FC = () => {
                 </h2>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <SkillCard
-                        title="Frontend Development"
-                        icon="fas fa-code"
-                        skills={[
-                            { name: 'React / Next.js', percentage: 95 },
-                            { name: 'Vue.js / Nuxt', percentage: 90 },
-                            { name: 'TypeScript', percentage: 92 },
-                        ]}
-                    />
-
-                    <SkillCard title="GitHub Languages" icon="fas fa-code" skills={githubSkills} />
+                    <SkillCard title="Frontend" icon="fas fa-code" skills={frontendSkills} />
+                    <SkillCard title="Backend" icon="fas fa-server" skills={backendSkills} />
+                    <SkillCard title="Cloud & DevOps" icon="fas fa-cloud" skills={cloudSkills} />
                 </div>
             </div>
         </section>
