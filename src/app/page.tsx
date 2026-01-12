@@ -9,7 +9,10 @@ import Footer from '../components/Footer';
 
 const Home = () => {
     return (
-        <div className="bg-black text-white">
+        <div className="min-h-screen" style={{
+            backgroundColor: "var(--color-background)",
+            color: "var(--color-text)"
+        }}>
             <Navbar />
             <Hero />
             <About />
@@ -19,6 +22,7 @@ const Home = () => {
             <Contact />
             <Footer />
         </div>
+
     );
 };
 

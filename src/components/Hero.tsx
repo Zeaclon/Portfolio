@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faNodeJs, faPython, faAws,} from '@fortawesome/free-brands-svg-icons';
 import Image from 'next/image';
+import {AzureIcon} from "../../public/icons/Azure";
+import {DotNetProps} from "../../public/icons/DotNet";
 
 const Hero = () => {
     return (
@@ -36,7 +38,7 @@ const Hero = () => {
                         </div>
 
                         <div className="tech-badge glass-effect px-8 py-4 rounded-full flex items-center gap-3">
-                            <Image src="/icons/DotNet.svg" alt=".NET" width={24} height={24} className="text-white" />
+                            <DotNetProps width={24} height={24} />
                             <span className="text-xl font-semibold">.Net</span>
                         </div>
 
@@ -48,7 +50,7 @@ const Hero = () => {
 
                         {/* Azure */}
                         <div className="tech-badge glass-effect px-8 py-4 rounded-full flex items-center gap-3">
-                            <Image src="/icons/Azure.svg" alt="Azure" width={24} height={24} />
+                            <AzureIcon width={24} height={24} />
                             <span className="text-xl font-semibold">Azure</span>
                         </div>
                     </div>
