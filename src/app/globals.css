@@ -5,23 +5,35 @@
 /* ---------- Theme variables ---------- */
 :root {
     --color-background: #000000;
-    --color-text: #ffffff;
+    --color-text-primary: #ffffff;   /* default dark mode text */
+    --color-text-secondary: #b3b3b3; /* default dark mode secondary */
     --color-primary: #690dab;
     --color-accent: #9b58b6;
     --font-geist-sans: "Geist Sans", sans-serif;
     --font-geist-mono: "Geist Mono", monospace;
     --svg-fill: rgb(155, 88, 182);
     --svg-stroke: #000000;
+    --gradient-start: #000000;
+    --gradient-end: rgba(105, 13, 171, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.06);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glow-color: rgba(155, 88, 182, 0.45);
 }
 
 /* Light mode overrides */
 html.light {
     --color-background: #f8f8f8;
-    --color-text: #171717;
+    --color-text-primary: #171717;   /* dark text for light mode */
+    --color-text-secondary: #555555; /* readable secondary text for light mode */
     --color-primary: #4a0080;
     --color-accent: #690dab;
     --svg-fill: #000000;
     --svg-stroke: #ffffff;
+    --gradient-start: #f8f8f8;
+    --gradient-end: rgba(106, 0, 128, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(0, 0, 0, 0.08);
+    --glow-color: rgba(105, 13, 171, 0.35);
 }
 
 /* Dark mode overrides */
@@ -59,9 +71,9 @@ html, body {
 
 /* ---------- Glass effect ---------- */
 .glass-effect {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
 }
 
 /* ---------- Buttons ---------- */
@@ -76,6 +88,11 @@ html, body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+/* ----------- Text Effect ----------- */
+.text-emphasis {
+    color: var(--color-text-primary);
 }
 
 /* ---------- Font Awesome ---------- */
@@ -126,6 +143,13 @@ html, body {
 }
 .float-animation { animation: float 3s ease-in-out infinite; }
 .glow-animation { animation: glow 2s ease-in-out infinite; }
+
+.glow-animation:hover {
+    box-shadow:
+            inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+            0 0 32px var(--glow-color),
+            0 12px 40px rgba(0, 0, 0, 0.6);
+}
 
 .tech-badge {
     transition: all 0.3s ease;

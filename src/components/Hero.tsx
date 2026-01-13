@@ -17,8 +17,18 @@ const Hero = () => {
                     <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
                         Hi, I&#39;m <span className="gradient-text">Bryce Marrett</span>
                     </h1>
-                    <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-8">Full-Stack Developer &amp; UI/UX Enthusiast</p>
-                    <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">Crafting exceptional digital experiences with modern technologies and innovative solutions</p>
+                    <p
+                        className="text-xl sm:text-2xl lg:text-3xl mb-8"
+                        style={{ color: 'var(--color-text-secondary)' }}
+                    >
+                        Full-Stack Developer &amp; UI/UX Enthusiast
+                    </p>
+                    <p
+                        className="text-lg mb-12 max-w-2xl mx-auto"
+                        style={{ color: 'var(--color-text-secondary)' }}
+                    >
+                        Crafting exceptional digital experiences with modern technologies and innovative solutions
+                    </p>
 
                     {/* Tech Stack Showcase */}
                     <div className="flex flex-wrap justify-center gap-4 mb-12 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
