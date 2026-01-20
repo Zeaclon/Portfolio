@@ -47,21 +47,21 @@ const ExperienceSection: React.FC = () => {
             company: 'Zone RV',
             dateRange: 'Jan 2025 - Dec 2025',
             description:
-                'Led development of enterprise-level web applications serving 100K+ users. Architected microservices infrastructure, implemented CI/CD pipelines, and mentored junior developers. Reduced deployment time by 60% and improved application performance by 40%.',
+                'Developed and maintained C#/.NET applications for internal engineering, manufacturing, and operational workflows. Built automation scripts and API integrations using Python and JavaScript to streamline HubSpot and Trello processes. Designed and deployed internal tools and dashboards for warranty claims, reporting, and operational efficiency. Wrote unit and integration tests to ensure system reliability. Conducted vulnerability checks and reviewed retention policies, contributing to secure handling of company data. Collaborated with cross-functional teams to analyze and resolve system and data issues. Documented processes and created reusable automation tools to support knowledge sharing across teams.',
         },
         {
             title: 'Missionary',
             company: 'Church of Jesus Christ of Latter-Day Saints',
             dateRange: 'Dec 2021 - Dec 2023',
             description:
-                'Developed communication, problem-solving, and cross-cultural teamwork skills.',
+                'Worked full-time in a highly structured, goal-driven environment requiring self-discipline, accountability, and adaptability. Developed strong interpersonal communication skills through daily engagement with individuals from diverse cultural, social, and economic backgrounds. Led and coordinated small teams across a large geographic area, providing mentoring, performance feedback, and logistical support. Planned and conducted training sessions and meetings focused on personal development, communication effectiveness, and teamwork. Managed schedules, reporting, and performance tracking while meeting weekly and monthly objectives. Resolved interpersonal and operational challenges under pressure, often with limited resources and supervision. Demonstrated resilience, emotional intelligence, and professionalism in demanding and unfamiliar environments.',
         },
         {
             title: 'Delivery Driver',
             company: "Work'n'Learn",
             dateRange: 'Nov 2020 - Feb 2021',
             description:
-                'Time management and operational reliability in high-pressure environments.',
+                'Ensured timely and accurate delivery of goods in a fast-paced, time-sensitive environment. Managed daily routes efficiently, balancing speed, safety, and reliability. Maintained accountability for company property and customer orders. Communicated professionally with customers and internal staff to resolve delivery issues. Demonstrated strong time management, punctuality, and consistency under operational pressure.',
         },
     ];
 
